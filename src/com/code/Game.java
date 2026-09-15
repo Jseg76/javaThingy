@@ -20,9 +20,9 @@ public class Game implements Runnable {
         this.height = height;
         this.title = title;
     }
-    public void init() {
-        Window window = new Window(title, width, height);
-    }
+//    public void init() {
+//
+//    }
     public void update() {
 
     }
@@ -39,8 +39,7 @@ public class Game implements Runnable {
         g.dispose();
     }
     public void run() {
-        init();
-
+        Window window = new Window(title, width, height);
         while(running){
             update();
             draw();
