@@ -1,12 +1,11 @@
-package game;
+package com.code;
 
-import javax.swing.JFrame;
+import java.awt.*;
+import java.util.*;
 
 public class Main {
-
     public static void main(String[] args) {
-        Display win = new Display();
-        win.createWindow("game", 1000, 800);
-
+        Game game = new Game("game", 1000, 800);
+        game.start();
     }
 }
