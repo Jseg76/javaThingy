@@ -1,19 +1,23 @@
-package game;
+package com.code;
 
-import javax.swing.*;
+import javax.swing.JFrame;
 import java.awt.*;
-import java.awt.Canvas.*;
 
-public class Display {
+public class Window {
     private JFrame frame;
     private static Canvas canvas;
-    private String title;
-    private int width, height;
 
-    public void createWindow(String title, int width, int height) {
+    String title;
+    int width, height;
+
+    public Window(String title, int width, int height) {
         this.title = title;
         this.width = width;
         this.height = height;
+
+        createWindow();
+    }
+    void createWindow(){
         frame = new JFrame(title);
         frame.setSize(width, height);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -32,4 +36,7 @@ public class Display {
     public static Canvas getCanvas(){
         return canvas;
     }
+
+
+
 }
