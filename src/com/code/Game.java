@@ -20,9 +20,6 @@ public class Game implements Runnable {
         this.height = height;
         this.title = title;
     }
-//    public void init() {
-//
-//    }
     public void update() {
 
     }

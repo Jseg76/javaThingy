@@ -1,5 +1,5 @@
 package com.code;
-//
+
 import javax.swing.JFrame;
 import java.awt.*;
 
