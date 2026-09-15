@@ -1,4 +1,4 @@
-package game;
+package com.code;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -6,7 +6,7 @@ import java.awt.color.*;
 import java.awt.event.*;
 
 public class Game implements Runnable {
-//    Player player = new Player(400, 700, 50, 50, Color.BLUE, 10);
+    Player player = new Player(400, 700, 50, 50, Color.BLUE, 10);
     int width, height;
     private String title;
     boolean running = false;
@@ -24,18 +24,19 @@ public class Game implements Runnable {
 
     }
     public void draw() {
-        bs = Display.getCanvas().getBufferStrategy();
+        bs = Window.getCanvas().getBufferStrategy();
         if (bs == null){
-            Display.getCanvas().createBufferStrategy(3);
+            Window.getCanvas().createBufferStrategy(3);
             return;
         }
         g = bs.getDrawGraphics();
         g.clearRect(0, 0, width, height);
-//        player.draw(g);
+        player.draw(g);
         bs.show();
         g.dispose();
     }
     public void run() {
+        Window window = new Window(title, width, height);
         while(running){
             update();
             draw();
